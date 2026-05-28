@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colectivos - Estación Lacroze</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #1B3A5C;
+            color: #fff;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #FFC72C;
+        }
+
+        header .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        header nav a:hover {
+            color: #FFC72C;
+        }
+
+        /* Contenedor general */
+        .contenedor {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 40px 30px;
+        }
+
+        /* Eyebrow y titulo */
+        .eyebrow {
+            color: #1B3A5C;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #1B3A5C;
+        }
+
+        .intro {
+            font-size: 17px;
+            color: #444;
+            margin-bottom: 40px;
+            max-width: 750px;
+        }
+
+        /* Secciones */
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 26px;
+            color: #1B3A5C;
+            margin-bottom: 15px;
+            border-left: 5px solid #FFC72C;
+            padding-left: 12px;
+        }
+
+        section p {
+            margin-bottom: 12px;
+        }
+
+        /* Imagen */
+        .imagen {
+            width: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            margin: 15px 0;
+            background-color: #eee;
+            display: block;
+        }
+
+        /* Tabla de horarios */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 15px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #1B3A5C;
+            color: #fff;
+            font-weight: normal;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f7f7f7;
+        }
+
+        /* Lista de lineas */
+        .lineas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .lineas span {
+            background-color: #FFC72C;
+            color: #1B3A5C;
+            font-weight: bold;
+            padding: 6px 14px;
+            border-radius: 3px;
+            font-size: 15px;
+        }
+
+        /* Listas comunes */
+        ul.simple {
+            list-style: disc;
+            margin-left: 22px;
+            margin-top: 10px;
+        }
+
+        ul.simple li {
+            margin-bottom: 8px;
+        }
+
+        /* Destinos */
+        .destinos {
+            background-color: #f4f4f4;
+            padding: 20px 25px;
+            margin-top: 15px;
+            border-left: 4px solid #1B3A5C;
+        }
+
+        .destinos h3 {
+            font-size: 16px;
+            color: #1B3A5C;
+            margin-bottom: 8px;
+        }
+
+        .destinos p {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1B3A5C;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #FFC72C;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px 20px;
+            }
+
+            header nav ul {
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .contenedor {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Estación Lacroze</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+
+        <p class="eyebrow">Colectivos · Urbano e Interurbano</p>
+        <h1>Terminal de Colectivos Lacroze</h1>
+
+        <p class="intro">
+            La terminal de Lacroze concentra más de veinte líneas de colectivo urbanas y varios servicios
+            interurbanos. Funciona las 24 horas y es una de las paradas más importantes del barrio de
+            Chacarita, conectando la zona con el centro porteño, el conurbano norte y el oeste del Gran
+            Buenos Aires.
+        </p>
+
+        <!-- Información del servicio -->
+        <section>
+            <h2>Información del servicio</h2>
+            <p>
+                En Lacroze paran líneas que cubren recorridos cortos dentro de la Ciudad de Buenos Aires
+                y también colectivos de media y larga distancia que salen hacia distintos puntos del país.
+                La terminal está integrada con la cabecera de la Línea B del subte y la estación del
+                Tren Urquiza, así que se puede combinar fácilmente con otros medios.
+            </p>
+            <p>
+                El servicio funciona todos los días del año. La frecuencia varía según la línea y el horario,
+                pero la mayoría tiene unidades cada pocos minutos durante el día.
+            </p>
+
+            <!-- Reemplazar por imagen propia, ej: img/colectivos-lacroze.jpg -->
+            <img src="img/colectivos.jpg" alt="Colectivos en la terminal Lacroze" class="imagen">
+        </section>
+
+        <!-- Líneas disponibles -->
+        <section>
+            <h2>Líneas que paran en Lacroze</h2>
+            <p>Estas son algunas de las líneas urbanas que tienen parada o cabecera en la terminal:</p>
+
+            <div class="lineas">
+                <span>19</span>
+                <span>39</span>
+                <span>42</span>
+                <span>47</span>
+                <span>63</span>
+                <span>71</span>
+                <span>87</span>
+                <span>90</span>
+                <span>93</span>
+                <span>105</span>
+                <span>108</span>
+                <span>111</span>
+                <span>112</span>
+                <span>127</span>
+                <span>151</span>
+                <span>152</span>
+                <span>168</span>
+                <span>176</span>
+                <span>184</span>
+                <span>194</span>
+            </div>
+
+            <p style="margin-top: 20px;">
+                Además operan empresas de larga distancia como Chevallier, Vía Bariloche, Crucero del Norte
+                y Flecha Bus, con salidas a distintas provincias.
+            </p>
+        </section>
+
+        <!-- Destinos principales -->
+        <section>
+            <h2>Destinos principales</h2>
+            <p>Algunas de las líneas más usadas y a dónde llegan:</p>
+
+            <div class="destinos">
+                <h3>Línea 39</h3>
+                <p>Chacarita - Barracas. Pasa por Corrientes, Callao, Av. de Mayo y baja hasta el sur de la ciudad.</p>
+            </div>
+
+            <div class="destinos">
+                <h3>Línea 168</h3>
+                <p>Lacroze - Don Torcuato. Conecta la terminal con el Gran Buenos Aires norte por Av. del Libertador.</p>
+            </div>
+
+            <div class="destinos">
+                <h3>Línea 71</h3>
+                <p>Liniers - Lacroze. Une el oeste de la ciudad con Chacarita atravesando Villa Crespo y Caballito.</p>
+            </div>
+
+            <div class="destinos">
+                <h3>Línea 152</h3>
+                <p>Olivos - La Boca. Una de las líneas más largas, recorre Av. del Libertador hasta el sur porteño.</p>
+            </div>
+        </section>
+
+        <!-- Mapa y ubicación -->
+        <section>
+            <h2>Mapa y ubicación</h2>
+            <p>
+                La terminal está sobre la avenida Federico Lacroze, al lado de la estación Federico Lacroze
+                de la Línea B del subte y de la cabecera del Tren Urquiza, en el barrio de Chacarita (CABA).
+            </p>
+
+            <!-- Reemplazar por mapa propio o capture de Google Maps -->
+            <img src="img/mapa-lacroze.jpg" alt="Mapa de la zona de Lacroze" class="imagen">
+
+            <p>
+                <strong>Dirección:</strong> Av. Federico Lacroze 4181, CABA.<br>
+                <strong>Cómo llegar:</strong> combinando con el subte B (estación Federico Lacroze) o con el
+                Tren Urquiza (estación Federico Lacroze).
+            </p>
+        </section>
+
+        <!-- Horarios -->
+        <section>
+            <h2>Horarios y frecuencia</h2>
+            <p>Frecuencia aproximada de algunas líneas urbanas:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Línea</th>
+                        <th>Lunes a viernes</th>
+                        <th>Sábados y domingos</th>
+                        <th>Madrugada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>39</td>
+                        <td>Cada 6 min</td>
+                        <td>Cada 10 min</td>
+                        <td>Cada 25 min</td>
+                    </tr>
+                    <tr>
+                        <td>71</td>
+                        <td>Cada 8 min</td>
+                        <td>Cada 12 min</td>
+                        <td>Cada 30 min</td>
+                    </tr>
+                    <tr>
+                        <td>152</td>
+                        <td>Cada 5 min</td>
+                        <td>Cada 9 min</td>
+                        <td>Cada 20 min</td>
+                    </tr>
+                    <tr>
+                        <td>168</td>
+                        <td>Cada 10 min</td>
+                        <td>Cada 15 min</td>
+                        <td>Cada 35 min</td>
+                    </tr>
+                    <tr>
+                        <td>176</td>
+                        <td>Cada 12 min</td>
+                        <td>Cada 18 min</td>
+                        <td>Cada 40 min</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top: 15px;">
+                Las salidas de larga distancia se concentran principalmente entre las 7:00 y las 23:00, con
+                algunas salidas nocturnas según el destino. Se recomienda consultar la web de cada empresa
+                para confirmar horarios actualizados.
+            </p>
+        </section>
+
+        <!-- Accesibilidad -->
+        <section>
+            <h2>Accesibilidad</h2>
+            <p>La terminal y la mayoría de las unidades cuentan con criterios de accesibilidad:</p>
+            <ul class="simple">
+                <li>Rampas de acceso en plataformas y veredas.</li>
+                <li>Espacios reservados dentro de los coches para personas en silla de ruedas.</li>
+                <li>Asientos prioritarios identificados para personas mayores y embarazadas.</li>
+                <li>Señalización con contraste claro y tipografía legible.</li>
+                <li>Anuncios sonoros de las paradas en las unidades nuevas.</li>
+                <li>Mostradores de información a baja altura para sillas de ruedas.</li>
+            </ul>
+        </section>
+
+        <!-- Formas de pago -->
+        <section>
+            <h2>Formas de pago</h2>
+            <p>El boleto se puede pagar con:</p>
+            <ul class="simple">
+                <li><strong>SUBE</strong> — la tarjeta recargable, válida en todo el AMBA.</li>
+                <li><strong>SUBE Digital</strong> — desde el celular con NFC, usando la app oficial.</li>
+                <li><strong>Tarjeta contactless</strong> — débito o crédito directamente en el molinete.</li>
+                <li><strong>Billeteras virtuales</strong> — Mercado Pago, Ualá y otras con NFC habilitado.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        Estación Lacroze © 2026 — <a href="contacto.html">Contacto</a>
+    </footer>
+
+</body>
+</html>
